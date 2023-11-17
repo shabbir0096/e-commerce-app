@@ -1,18 +1,14 @@
-import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:ecommerce_store_horizon/app/components/custom_button.dart';
 import 'package:ecommerce_store_horizon/utils/colors.dart';
 import 'package:ecommerce_store_horizon/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-
 import '../../../components/slider_widget.dart';
 import '../../../models/product_model.dart';
 import '../../../routes/app_pages.dart';
 import '../../cart/controllers/cart_controller.dart';
-import '../../cart/views/cart_view.dart';
 import '../controllers/product_details_controller.dart';
 
 class ProductDetailsView extends GetView<ProductDetailsController> {
@@ -23,7 +19,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
     return WillPopScope(
       onWillPop: () async {
         Get.back();
-        return true; // Return true to allow the back navigation, or false to prevent it.
+        return true;
       },
       child: Scaffold(
         appBar: AppBar(
@@ -33,7 +29,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.green,
             onPressed: () {
-              Get.to(const CartView());
+              Get.toNamed(Routes.CART);
             },
             child: Stack(
               clipBehavior: Clip.none,

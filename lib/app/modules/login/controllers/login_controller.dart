@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
-
 import '../../../../utils/api_endpoints.dart';
 import '../../../models/user_model.dart';
 
@@ -56,6 +55,8 @@ class LoginController extends GetxController {
         users = data.map((userJson) => UserModel.fromJson(userJson)).toList();
 
         box.write('userId', users[0].id);
+
+        print("user is ${users[0].id}");
         login(email, password);
       } else {
         if (response.statusCode == 401) {

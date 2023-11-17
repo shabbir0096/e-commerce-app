@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-
-
 class ColorsUtils{
 static const primary =  Color(0xFF0b813f);
 static const secondary = Color(0xFF18ad8f);
@@ -19,7 +17,6 @@ static const menuScreenColor = Color(0xFF17203A);
 
 static const darkBlue = Color(0xFF173E83);
 static const homeBgColor = Color(0xFFE4F6FF);
-
 
 // gradient colors
 

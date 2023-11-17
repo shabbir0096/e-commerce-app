@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import '../../../models/product_model.dart';
 
 class CartController extends GetxController {
@@ -22,7 +21,7 @@ class CartController extends GetxController {
     if (product.quantity > 1) {
       product.quantity.value--;
     } else {
-      // If the quantity is 1, remove the product from the cart
+
       removeFromCart(product);
       productQuantity--;
     }
